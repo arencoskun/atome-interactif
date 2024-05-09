@@ -5,5 +5,6 @@ export const pages: string[] = [
     "thomson",
     "rutherford",
     "rutherfordbohr",
-    "chadwick"
+    "chadwick",
+    "fin"
 ]
