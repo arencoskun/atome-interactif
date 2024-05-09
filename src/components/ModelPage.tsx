@@ -26,7 +26,8 @@ export function ModelPage({
     green: ["bg-green-600", "bg-green-950"],
     red: ["bg-red-600", "bg-red-950"],
     blue: ["bg-blue-600", "bg-blue-950"],
-    purple: ["bg-purple-600", "bg-purple-950"]
+    purple: ["bg-purple-600", "bg-purple-950"],
+    yellow: ["bg-yellow-600", "bg-yellow-950"]
   };
   return (
     <div className="flex flex-col h-screen bg-gray-300">
@@ -40,7 +41,10 @@ export function ModelPage({
         <main className="flex-grow">
           <Canvas className="w-full h-full" shadows={true}>
             <Camera />
-            <CustomDirectionalLight />
+            <CustomDirectionalLight x={0} y={20} z={-20} />
+            <CustomDirectionalLight x={0} y={-20} z={-20} />
+            <CustomDirectionalLight x={0} y={20} z={20} />
+            <CustomDirectionalLight x={0} y={-20} z={20} />
             <Model url={modelURL} />
             <OrbitControls autoRotate={autoRotate} />
           </Canvas>
