@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ModelPage } from "@/components/ModelPage";
 
-export default function DemocriteModelPage() {
+export default function AristoteModelPage() {
   return (
     <ModelPage
       title="Le modèle de Aristote"

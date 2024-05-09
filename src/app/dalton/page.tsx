@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ModelPage } from "@/components/ModelPage";
 
-export default function DemocriteModelPage() {
+export default function DaltonModelPage() {
   return (
     <ModelPage
       title="Le modèle de Dalton"
