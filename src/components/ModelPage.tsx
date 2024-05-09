@@ -25,6 +25,8 @@ export function ModelPage({
   const colorVariants: ColorVariantsType = {
     green: ["bg-green-600", "bg-green-950"],
     red: ["bg-red-600", "bg-red-950"],
+    blue: ["bg-blue-600", "bg-blue-950"],
+    purple: ["bg-purple-600", "bg-purple-950"]
   };
   return (
     <div className="flex flex-col h-screen bg-gray-300">

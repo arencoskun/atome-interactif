@@ -1,10 +1,5 @@
 "use client";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import React, { useState } from "react";
-import CustomDirectionalLight from "@/components/CustomDirectionalLight";
-import Camera from "@/components/Camera";
-import { Model } from "@/components/Model";
 import { ModelPage } from "@/components/ModelPage";
 
 export default function DemocriteModelPage() {

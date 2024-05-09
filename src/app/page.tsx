@@ -7,7 +7,7 @@ import Camera from "@/components/Camera";
 import { Model } from "@/components/Model";
 import { ModelPage } from "@/components/ModelPage";
 
-export default function DemocriteModelPage() {
+export default function RutherfordBohrModelPage() {
   return (
     <ModelPage
       title="Le modèle de Rutherford-Bohr"
@@ -17,7 +17,7 @@ export default function DemocriteModelPage() {
       • Il peut y avoir plus d’un électron dans une couche électronique.<br/><br/>
       • Un atome neutre contient autant d’électrons que de protons."
       color="red"
-      modelURL="models/rutherford.glb"
+      modelURL="models/dalton.glb"
       pageIndex={0}
     ></ModelPage>
   );
