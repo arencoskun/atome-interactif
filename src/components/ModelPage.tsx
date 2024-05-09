@@ -5,12 +5,15 @@ import CustomDirectionalLight from "@/components/CustomDirectionalLight";
 import Camera from "@/components/Camera";
 import { Model } from "@/components/Model";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
+import { pages } from "@/util/pages";
 
 export function ModelPage({
   title,
   description,
   modelURL,
   color,
+  pageIndex
 }: {
   title: string;
   description: string;
@@ -18,6 +21,7 @@ export function ModelPage({
   color: string;
   pageIndex: number;
 }) {
+  const router = useRouter();
   const [autoRotate, setAutoRotate] = useState<boolean>(false);
   type ColorVariantsType = {
     [key: string]: [string, string];
@@ -28,7 +32,8 @@ export function ModelPage({
     blue: ["bg-blue-600", "bg-blue-950"],
     purple: ["bg-purple-600", "bg-purple-950"],
     yellow: ["bg-yellow-600", "bg-yellow-950"],
-    gray: ["bg-gray-600", "bg-gray-950"]
+    gray: ["bg-gray-600", "bg-gray-950"],
+    orange: ["bg-orange-600", "bg-orange-950"]
   };
   return (
     <div className="flex flex-col h-screen bg-gray-300">
@@ -72,7 +77,7 @@ export function ModelPage({
         <Button
           extraclassname={`
             absolute bottom-3 right-4 w-30 h-10 ${colorVariants[color][0]} hover:${colorVariants[color][1]}
-          `}
+          `} onClick={() => router.push(pages[pageIndex + 1])}
         >
           Continuer
         </Button>

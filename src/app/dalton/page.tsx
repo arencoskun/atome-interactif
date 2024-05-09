@@ -15,7 +15,7 @@ export default function DaltonModelPage() {
       "
       color="blue"
       modelURL="models/dalton.glb"
-      pageIndex={0}
+      pageIndex={2}
     ></ModelPage>
   );
 }

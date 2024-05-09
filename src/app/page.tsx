@@ -1,24 +1,30 @@
 "use client";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import React, { useState } from "react";
-import CustomDirectionalLight from "@/components/CustomDirectionalLight";
-import Camera from "@/components/Camera";
-import { Model } from "@/components/Model";
-import { ModelPage } from "@/components/ModelPage";
+import React from "react";
+import Button from "@/components/Button";
+import { useRouter } from "next/navigation";
+import { pages } from "@/util/pages";
 
-export default function RutherfordBohrModelPage() {
+export default function MainPage() {
+  const router = useRouter();
+
   return (
-    <ModelPage
-      title="Le modèle de Rutherford-Bohr"
-      description="Ils trouvent que:<br/><br/>
-      • L’atome contient un espace presque vide avec un noyau dense qui contient les protons.<br/><br/>
-      • Les électrons circulent autour du noyau de l’atome sur les couches électroniques.<br/><br/>
-      • Il peut y avoir plus d’un électron dans une couche électronique.<br/><br/>
-      • Un atome neutre contient autant d’électrons que de protons."
-      color="red"
-      modelURL="models/dalton.glb"
-      pageIndex={0}
-    ></ModelPage>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-3xl font-bold mb-4 text-center">
+        « De tout temps l’Homme s’est posé la question : mais de quoi est constituée la matière ? »
+      </h1>
+      <p className="text-xl mb-8 text-center">
+        Découvrez l'histoire de l'atome de manière interactive.
+      </p>
+      <Button extraclassname="bg-blue-500 hover:bg-blue-700" onClick={() => {
+        router.push(pages[0]);
+      }}>
+        Commencer
+      </Button>
+      <div className="absolute bottom-0 w-full text-center pb-4">
+        <a href="https://github.com/arencoskun/atome-interactif" className="text-sm text-blue-500 hover:underline">
+          Vérifier le code source
+        </a>
+    </div>
+    </div>
   );
 }

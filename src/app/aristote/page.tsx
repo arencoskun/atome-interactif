@@ -9,7 +9,7 @@ export default function AristoteModelPage() {
       description="Selon lui, la matière doit remplir l’espace qu’elle occupe. Il a pensé qu’il n’y avait pas d’espaces vides dans la matière."
       color="purple"
       modelURL="models/aristote.glb"
-      pageIndex={0}
+      pageIndex={1}
     ></ModelPage>
   );
 }

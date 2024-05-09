@@ -12,7 +12,7 @@ export default function RutherfordModelPage() {
       "
       color="gray"
       modelURL="models/rutherford.glb"
-      pageIndex={0}
+      pageIndex={4}
     ></ModelPage>
   );
 }

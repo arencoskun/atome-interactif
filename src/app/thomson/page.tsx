@@ -15,7 +15,7 @@ export default function ThomsonModelPage() {
       "
       color="yellow"
       modelURL="models/thomson.glb"
-      pageIndex={0}
+      pageIndex={3}
     ></ModelPage>
   );
 }
